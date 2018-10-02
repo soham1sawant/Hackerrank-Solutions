@@ -1,0 +1,7 @@
+- create counter variable
+- create a for loop that oops the list using its index position
+- if i + (m-1) i less than the length of list
+	- total as the sum of the sliced string from the index i to m+1
+	- if total is equal to d
+		- increase counter by 1
+- print counter variable

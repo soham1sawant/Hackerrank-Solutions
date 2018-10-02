@@ -1,0 +1,4 @@
+- traverse the array using for loop
+- make a temporary list to store the evaluated elements
+- check if the conditions meet
+- if yes then increase the counter variable

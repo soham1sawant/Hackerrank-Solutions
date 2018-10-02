@@ -1,0 +1,9 @@
+- take the year input from the user
+- check if the year falls in the Julian Calendar
+   or Gregorian Calendar
+- Jan,Feb,March,Apr,May,June,July,Aug,Sep,Oct,Nov,Dec
+-           Leap year
+- 31 + 28 + 31 +30+31+30+31+31
+-   In year 1918
+- Jan,Feb,March,Apr,May,June,July,Aug,Sep
+- 31 +

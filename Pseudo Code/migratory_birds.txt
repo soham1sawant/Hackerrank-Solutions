@@ -1,0 +1,3 @@
+- create a dictionary and initalize the bird types 1 to 5 to 0
+- traverse via for loop through the array and increase the counter via as the type come
+- 
