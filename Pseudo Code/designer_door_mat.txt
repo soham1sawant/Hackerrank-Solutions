@@ -1,0 +1,7 @@
+# designer_door_mat.txt
+
+- accept user input and split it into the 2 variables n,m
+- run a loop for add numbers from 1 to 'n'
+- run a new loop from 1 to 'n'
+- in this loop if value of i is (n/2)+0.5 then print the WELCOME message
+- else 
