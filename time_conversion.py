@@ -1,25 +1,31 @@
 # time_conversion.py
 
 def timeConversion():
-    s = input("Enter the time in 12 HR format : ").split(':')
-    ampm = s[2][2:4]
-    sec = s[2][0:2]
-    if ampm == 'PM':
-        if s[0] == '12':
-            print('12' + ':' + s[1] + ':' + sec)
+    s = input("Enter the time in 12 HR format : ")              # spilts the string into hours, minutes and seconds
+    if 'AM' in s:                                               # checks if the time is AM
+        if s == '12:00:00AM':
+            return '00:00:00'
+        elif s[0:2] == '12':
+            return '00'+s[2:8]
         else:
-            print(str(int(s[0])+12) + ':' + s[1] + ':' + sec)
-    elif ampm == 'AM':
-        if s[0] == '12':
-            print('00' + ':' + s[1] + ':' + sec)
+            return s[0:8]
+
+
+    else:                                                       # checks if the time is PM
+        if s == '12:00:00PM':
+            return'12:00:00'
+        elif s[0:2] == '12':
+            return '12'+s[2:8]
         else:
-            print(s[0] + ':' + s[1] + ':' + sec)
+            s = s.split(':')
+            time = str(int(s[0])+12) + ':' + s[1] + ':' + s[2][0:2]
+            return time
 
 def main():
     print()
     print("Hackerrank : Time Coversion")
     print()
 
-    timeConversion()
+    print(timeConversion())
 
 main()
