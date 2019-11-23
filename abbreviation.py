@@ -1,14 +1,20 @@
 # abbreviation.py
 
 def abbreviation (a , b):
-    a = a.upper()
-    newA = ''
+    s1 = ''
+    s2 = ''
 
     for l in a:
-        if l in b:
-            newA += l
+        if l.islower() and l.upper() not in b:
+            #print(l)
+            s1 += l
 
-    if newA == b:
+    for l in a:
+        if l not in s1:
+            #print(l)
+            s2 += l.upper()
+
+    if s2 == b:
         return "YES"
     else:
         return "NO"

@@ -1,0 +1,6 @@
+# abbreviation.txt
+
+- Accepts the two strings in the function
+- Iterates through a and checks if the uppercase version of that letter from 'a' is in 'b'
+- If the letter is in 'b' then add to new strings
+- If this string is equal to 'b'  print 'YES' else print'NO'

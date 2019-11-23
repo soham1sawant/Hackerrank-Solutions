@@ -1,21 +1,29 @@
 # apple_and_orange.py
 
 def countApplesAndOranges(s , t , a , b , apples , oranges):
-    print(sum([1 for x in apples if (x + a) >= s and (x + a) <= t]))
-    print(sum([1 for x in oranges if (x + a) >= s and (x +a) <= t]))
+    ctr1 = 0
+    for apple in apples:
+        apple += a                  # add the distance of the apple tree to the fallen apple
+        if apple >= s and apple <= t:   # checks if the final fallen distance lies within the values of Sam's house
+            ctr1 += 1                   # if yes then it increases the value of counter by 1
 
-def main():
-    print()
-    print("Hackerrank : Apple and Orange")
-    print()
+    ctr2 = 0
+    for orange in oranges:
+        orange += b                 # add the distance of the orange tree to the fallen orange
+        if orange >= s and orange <= t:     # checks if the final fallen distance lies within the values of Sam's house
+            ctr2 += 1                   # if yes then it increases the value of counter by 
 
-    s , t = map(int , input("Enter the starting and ending locations of Sam's house : ").split())
-    a , b = map(int , input("Enter the location of Apple tree and Orange Tree : ").split())
-    m , n = map(int , input("Enter the number of Apples and Oranges : ").split())
+    print(ctr1)
+    print(ctr2)
 
-    apples = list(map(int , input("Enter the distances the apples fell from the tree : ").split()))
-    oranges = list(map(int , input("Enter the distances the oranges fell from the tree : ").split()))
+if __name__ == '__main__':
+    s , t = map(int, input("Enter 's' and 't' : ").split())
 
-    countApplesAndOranges(s , t , a , b , apples , oranges)
+    a , b = map(int , input("Enter 'a' and 'b' : ").split())
 
-main()
+    m , n = map(int , input("Enter 'm' and 'n' : ").split())
+
+    apples = list(map(int, input("Enter the falling distance of the apples : ").rstrip().split()))
+    oranges = list(map(int, input("Enter the falling distance of the oranges : ").rstrip().split()))
+
+    countApplesAndOranges(s, t, a, b, apples, oranges)
