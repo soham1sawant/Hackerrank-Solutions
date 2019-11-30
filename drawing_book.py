@@ -1,7 +1,7 @@
 # drawing_book.py
 
 def pageCount(n , p):
-    print( int(min(p/2 , n/2 - p/2)) )
+    print(min(p//2 , n//2 - p//2))
 
 def main():
     print()
