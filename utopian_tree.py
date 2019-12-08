@@ -2,11 +2,15 @@
 
 def utopianTree(n):
     height = 0
-    for i in range(n):
-        if i%2 == 0:
-            height  = height * 2
-        else:
+
+    for i in range(n+1):
+        if i == 0:
             height += 1
+        else:
+            if i%2 != 0:
+                height  = height * 2
+            else:
+                height += 1
     
     return height
 
