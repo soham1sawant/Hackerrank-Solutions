@@ -1,5 +1,5 @@
 # Balanced_Brackets.py
-#  Practice > Data Structures > Stacks > Balanced Brackets
+# Practice > Data Structures > Stacks > Balanced Brackets
 
 import sys
 
