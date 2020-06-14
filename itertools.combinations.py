@@ -1,24 +1,17 @@
 # itertools.combinations.py
 
-from itertools import combinations
+from itertools import *
 
 def compute():
     S , k = input("Enter the string S and the value of k : ").split()
-    ans = list(combinations(S , int(k)))
-    ans.sort()
-    S = list(S)
-    S.sort()
-    for i in ans:
-        S.append(i)
-    for i in S:
-        str = ''
-        for j in i:
-            str +=j
-        print(str)
+
+    for i in range(1, int(k)+1):
+        for c in combinations(sorted(S), i):
+            print(''.join(c))
 
 def main():
     print()
-    print("HAckerrank : itertools.combinations()")
+    print("Hackerrank : itertools.combinations()")
     print()
 
     compute()
