@@ -1,0 +1,32 @@
+- take the values and store then as a deque
+
+- create an empty stack to store the stacked values
+
+- while the data deque is not empty and the check variable is False
+    - store the left and right values from data
+    
+    - if the stack is not empty
+
+        - if the right value is greater than the left value and smaller than equal to the last element of the stack
+            - pop the right value and add it to the stack
+        
+        - elif the left value is greater than the right value and smaller than equal to the last element of the stack
+            - pop the left value and add it to the stack
+        
+        - elif if both are equal and and both are smaller than equal to the last element of the stack
+            - pop the right element and add it to the stack
+
+        - else
+            - make the check variable False
+    - else if the stack is empty
+        - if the right value is greater than the left value
+            - pop right value from data and add to stack
+        - elif the left value is greater than the right value
+            - pop left value from data and add to stack
+        - else if both are same
+            - pop the right element and add it to the stack
+
+- if check variable is True
+    - print YES
+- else
+    - print NO
