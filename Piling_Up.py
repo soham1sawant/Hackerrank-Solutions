@@ -9,7 +9,7 @@ def compute():
 
         stack = []
         check = True
-        while (len(data) == 0) and check:
+        while (len(data) != 0) and check:
             left = data[0]
             right = data[len(data) - 1]
 
