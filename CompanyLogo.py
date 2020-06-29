@@ -1,22 +1,4 @@
-def compute():
-    name = input("Enter the name of the company : ").strip()
-    letters = {}
-    for letter in name:
-        if letter is ' ':
-            continue
-        else:
-            if letter in letters:
-                letters[letter] += 1
-            else:
-                letters[letter] = 1
-    
-    sortedLetters = sorted(letters.items(), key = lambda x : x[1], reverse = True)
-    ctr = 0
-    for i in sortedLetters:
-        if ctr == 3:
-            break
-        print(i[0] + ' ' + str(i[1]))
-        ctr += 1
+from collections import Counter
 
-if __name__ == "__main__":
-    compute()
+logo = dict(Counter(sorted(input())).most_common(3))
+[print(i,j) for i,j in logo.items()]
